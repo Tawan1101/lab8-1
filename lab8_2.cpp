@@ -1,9 +1,32 @@
-#include<iostream>
-#include<iomanip>
-#include<string>
+#include <iostream>
+#include <iomanip>
+#include <string>
+
 using namespace std;
 
-//[Missing Code 1] Write definition of the function findGrade() here.
+
+
+char findGrade(double x){
+
+if ( x > 90)
+return 'A';
+else   
+if ( x > 75 )    
+return 'B'; 
+else     
+if ( x > 60 )     
+return 'C';    
+else      
+if ( x > 45 )     
+return 'D';    
+else                
+return 'F';
+}
+
+
+
+
+
 
 int main(){
 	//Input the number of students
@@ -17,13 +40,15 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
-		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
+		cin >> score[i];
+		//[Missing Code 2] Get name of the i-th students that may include whitespace.
 		//[Missing Code 3] Get score of the i-th students.
 		i++;
 	}
 	
-	//Print names scores and grades
+		//Print names scores and grades
 	i = 0;
 	cout << "---------------------------------------------\n";
 	cout << setw(25) << "Name" << setw(8) << "Score" << setw(8) << "Grade" << "\n";
